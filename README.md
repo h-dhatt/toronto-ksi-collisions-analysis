@@ -1,34 +1,29 @@
 # Toronto KSI Traffic Collisions Analysis
 
 ## Overview
-This project analyzes traffic collisions in Toronto involving individuals who were killed or seriously injured (KSI). Using publicly available City of Toronto data, the analysis focuses on identifying spatial hotspots, temporal patterns, and the types of road users involved.
-
-The goal of the project is to explore observable patterns in severe traffic collisions without making causal claims.
+This project analyzes traffic collisions in Toronto involving individuals who were killed or seriously injured (KSI). The analysis focuses on identifying spatial hotspots, long-term trends, and road users involved using publicly available City of Toronto data.
 
 ## Data
 - Source: City of Toronto / Toronto Police open data
-- Scope: Collisions involving killed or seriously injured persons
-- Unit of analysis:
-  - Person-level records (for road user and spatial analysis)
-  - Aggregated views for temporal trends
+- Unit of analysis: person-level collision records
+- Time range: varies by data availability
 
 ## Methods
-- Data cleaning and exploratory analysis using Python (pandas)
+- Data cleaning and exploratory analysis in Python (pandas)
 - Spatial aggregation to identify high-frequency KSI locations
-- Time-based trend analysis by year
+- Trend analysis by year
 - Visualization and dashboarding in Power BI
 
 ## Key Findings
 - Certain locations appear repeatedly in KSI collision records, forming identifiable spatial hotspots.
-- KSI collision counts fluctuate year-to-year rather than following a single monotonic trend.
-- Pedestrians and occupants of automobiles account for a large share of KSI records, reflecting exposure patterns.
+- KSI collision counts fluctuate over time rather than following a single monotonic trend.
+- Pedestrians and occupants of automobiles account for a large share of KSI records.
 
 ## Limitations
-- The dataset does not reliably include time-of-day information, so hourly analysis was excluded.
-- Results are descriptive and do not imply causation or risk per trip.
-- Location precision varies across records.
+- Time-of-day data was not reliable and was excluded.
+- Results are descriptive and do not imply causation.
+- Counts reflect records, not exposure or risk per trip.
 
-## Tools
-- Python (pandas, matplotlib)
-- SQL
-- Power BI
+## Dashboard
+![Hotspots](visuals/hotspots.jpg)
+![Trends](visuals/trends_road_users.jpg)
